@@ -1,0 +1,5 @@
+seaborn
+scipy
+sklearn
+matplotlib
+plotly
