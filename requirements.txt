@@ -1,6 +1,6 @@
 seaborn
 scipy
-sklearn
+
 matplotlib
 plotly
 pandas
