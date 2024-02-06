@@ -3,3 +3,9 @@ scipy
 sklearn
 matplotlib
 plotly
+pandas
+scikit-learn
+seaborn
+sweetviz
+matplotlib
+numpy
