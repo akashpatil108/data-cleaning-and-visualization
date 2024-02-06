@@ -24,7 +24,7 @@ st.set_page_config(
     layout="centered",
     initial_sidebar_state="auto",  # or ""
     )
-with open(style.css) as f:
+with open("style.css") as f:
     css=f.read()
 st.markdown("<style>" + css +"</style>",unsafe_allow_html=True)
 # Add viewport meta tag for custom HTML
