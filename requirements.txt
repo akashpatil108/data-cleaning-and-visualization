@@ -1,6 +1,6 @@
 seaborn
 scipy
-
+statsmodels
 matplotlib
 plotly
 pandas
