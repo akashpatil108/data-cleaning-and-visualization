@@ -1,0 +1,216 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.header {
+    font-size: 40px; /* Adjust base font size as needed */
+    font-weight: bold;
+    color: #417fa8; /* Navy Blue */
+    text-align: center; /* Adjust alignment if needed */
+    padding-bottom: 5%; /* Adjust padding as needed */
+    /* Additional properties for enhancement: */
+    font-family: Arial, sans-serif; /* Choose a clear, readable font */
+    letter-spacing: 1px; /* Add subtle spacing for better readability */
+    line-height: 1.2; /* Increase line height for breathability */
+    margin-bottom: 20px; /* Add bottom margin for separation */
+  }
+  
+
+  
+.title {
+    font-size: 4rem;
+    font-weight: bold;
+}
+.intro {
+    font-size: 18px;
+    color: #f175d6; 
+    margin-bottom: 20px}
+
+.info {
+    /* Font adjustments for clarity and emphasis */
+    font-size: 1.2rem; /* Slightly larger for readability */
+    font-weight: bold; /* Clear and distinct */
+    font-family: Arial, sans-serif; /* Modern and readable */
+    color: #333; /* Dark text for good contrast */
+    position: relative;
+    text-align: center;
+    -ms-text-size-adjust: auto  ;
+  
+    /* 3D box styling */
+    display:grid; /* Allows text to wrap within the box */
+    background-color: #f5f5f5; /* Light gray background */
+    border: 1px solid #ddd; /* Thin, light gray border */
+    border-radius: 4px; /* Soft corners */
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2),
+               -2px -2px 4px rgba(0, 0, 0, 0.2); /* Outward and inward shadows */
+  
+    /* Transitions for smooth animations */
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  
+    /* Hover effect with additional animations */
+    &:hover {
+      transform: translateY(-2px); /* Slightly move down on hover */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2),
+                 0 0 2px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
+                 
+    }
+  }
+      
+    
+      
+/* Subheader style */
+.stSubheader {
+    font-size: 24px;
+    font-weight: bold;
+    color: #e44f4f;
+    margin-bottom: 10px;
+    padding: auto;
+}
+
+
+.stButton {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.stButton:hover {
+    background-color: #0056b3;
+}
+
+
+
+/* Base styling for a clean look */
+.stMultiSelect {
+    background-color: #fff; /* Transparent to blend with white background */
+    border: none;
+    box-shadow: none;
+    padding: 8px 12px;
+    border-radius: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+}
+
+/* Individual tag styling with 3D effect */
+.stMultiSelect [data-baseweb="tag"] {
+  background-color: #f5f5f5; /* Light gray base */
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 6px 12px;
+  color: #333; /* Darker text for clarity */
+  font-weight: normal;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 0 2px rgba(0, 0, 0, 0.05);
+  transition: 0.2s transform ease-in-out;
+}
+
+/* Hover effect for depth simulation */
+.stMultiSelect [data-baseweb="tag"]:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1), 0 0 4px rgba(0, 0, 0, 0.05);
+}
+
+/* Selected tag styling with different color */
+.stMultiSelect [data-baseweb="tag"][aria-selected="true"] {
+  background-color: #e0efff; /* Light blue */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 0 1px rgba(0, 0, 0, 0.05);
+}
+
+/* Accessibility considerations */
+.stMultiSelect [data-baseweb="tag"] {
+  box-sizing: border-box; /* Ensures consistent behavior */
+}
+
+/* Responsiveness (optional, adjust as needed) */
+@media only screen and (max-width: 768px) {
+  .stMultiSelect {
+    font-size: 0.9rem; /* Reduce font size for smaller screens */
+  }
+}
+  
+
+/* Base styling for a clean look */
+.stSelectbox {
+    background-color: #fff; /* Transparent to blend with white background */
+    border: none;
+    box-shadow: none;
+    padding: 8px 12px;
+    border-radius: 8px;
+    appearance: none; /* Remove default dropdown styling */
+    width: fit-content; /* Ensure proper sizing */
+    z-index: 1; /* Ensure visibility over other elements */
+  }
+  
+  .stSelectbox:hover {
+    border: 0.5px solid rgba(113, 127, 252, 0.774);
+    box-shadow:inset;
+    
+  }
+
+  
+  /* Hover effect for subtle emphasis */
+.stSelectbox div[role="listbox"] li:hover {
+    background-color: #f8f8f8; /* Lighter gray on hover */
+  }
+  
+  /* Accessibility considerations */
+.stSelectbox select {
+    box-sizing: border-box; /* Ensures consistent behavior */
+  }
+  
+  /* Responsiveness (optional, adjust as needed) */
+  @media only screen and (max-width: 768px) {
+.stSelectbox {
+      font-size: 0.9rem; /* Reduce font size for smaller screens */
+    }
+  }
+
+
+/* Define a container for the header and links */
+.corner-header {
+    display: flex; /* Enable flexbox layout */
+    justify-content: flex-end; /* Align content to the right */
+    align-items: flex-end; /* Align content to the bottom */
+    position: absolute; /* Position independently of other elements */
+    bottom: 20px; /* Adjust bottom positioning as needed */
+    right: 20px; /* Adjust right positioning as needed */
+  }
+  .tagline {
+    /* Font and text styles */
+    font-size: 2.5rem; /* Adjust size as needed */
+    font-weight: bold;
+    line-height: 1.5;
+    text-align: center; /* Adjust alignment if needed */
+    color: #333; /* Dark text for readability */
+  
+    /* Spacing and layout */
+    padding: 20px 0; /* Vertical padding */
+    margin: 0 auto; /* Center horizontally */
+    max-width: 800px; /* Optional limitation on width */
+  
+    /* Optional gradient for visual appeal */
+    background: linear-gradient(to right, #f5f5f5, #fff);
+  
+    /* Optional text shadow for depth */
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  
+    /* Optional hover effect */
+    &:hover {
+      background: linear-gradient(to right, #fff, #f5f5f5);
+    }
+  }
+  
+  /* Optional subtitle styling */
+  .tagline .subtitle {
+    font-size: 1.2rem; /* Adjust size as needed */
+    color: #999; /* Lighter color for emphasis */
+    font-weight: normal;
+    margin-top: 10px; /* Spacing from tagline */
+  }
+  
