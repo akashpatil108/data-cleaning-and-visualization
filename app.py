@@ -1614,8 +1614,9 @@ col1, col2 = st.columns(2)
 # Function to perform group by
 def perform_group_by(df):
     col1.markdown("#### Group by")
+    non_category_columns = df.select_dtypes(exclude='category').columns.tolist()
     key_value = str(next(key))
-    selected_column_gb = col1.selectbox("Select Column for Group By", df.columns,key=key_value)
+    selected_column_gb = col1.selectbox("Select Column for Group By", non_category_columns,key=key_value)
 
     aggregation_functions = {
         "int64": ["mean", "sum", "count", "min", "max"],
