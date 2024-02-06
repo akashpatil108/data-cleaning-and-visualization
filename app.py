@@ -1614,11 +1614,31 @@ col1, col2 = st.columns(2)
 # Function to perform group by
 def perform_group_by(df):
     col1.markdown("#### Group by")
-    selected_column_gb = col1.selectbox("Select Column for Group By", df.columns)
-    aggregation_function_gb = col1.selectbox("Select Aggregation Function", ["mean", "sum", "count", "min", "max"])
+    key_value = str(next(key))
+    selected_column_gb = col1.selectbox("Select Column for Group By", df.columns,key=key_value)
+
+    aggregation_functions = {
+        "int64": ["mean", "sum", "count", "min", "max"],
+        "float64": ["mean", "sum", "count", "min", "max"],
+        "object": ["count"],
+        "datetime64": ["min", "max"],  # Example: Date/Time columns
+        "bool": ["sum", "count"],       # Example: Boolean columns
+        # Add more data types and corresponding aggregation functions as needed
+    }
+
+    # Get the data type of the selected column
+    column_dtype = df[selected_column_gb].dtype
+
+    # Show the aggregation function selection based on the data type of the selected column
+    key_value = str(next(key))
+    aggregation_function_gb = col1.selectbox("Select Aggregation Function", aggregation_functions.get(str(column_dtype), ["count"]),key=key_value)
+
+    # Group by the selected column and apply the chosen aggregation function
     grouped_data = df.groupby(selected_column_gb).agg(aggregation_function_gb).reset_index()
+
     col1.write(f"Grouped Data by {selected_column_gb} using {aggregation_function_gb}:")
     col1.write(grouped_data)
+
 
 # Call the function
 perform_group_by(session_state.selected_dataset)
