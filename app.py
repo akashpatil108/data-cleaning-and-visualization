@@ -12,7 +12,7 @@ import io
 import base64
 import matplotlib.pyplot as plt
 import plotly.express as px
-st.set_option('deprecation.showPyplotGlobalUse', False)
+# st.set_option('deprecation.showPyplotGlobalUse', False)
 import plotly.graph_objects as go
 from io import BytesIO
 
